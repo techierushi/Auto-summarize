@@ -13,30 +13,36 @@ import streamlit as st
 
 html_temp = """
 <div style ="background-color:#acf07f;padding:13px">
-<h1 style ="color:black;text-align:center;font-family: Garamond, serif;font-size:42px;">Washington Post Article <br> Summary Generator</h1>
+<h1 style ="color:black;text-align:center;font-family: Garamond, serif;font-size:43px;">News Post Article <br> Summary Generator</h1>
 </div>
 """
 st.markdown(html_temp, unsafe_allow_html = True)
 
 st.markdown("""
-<h2><center>Short Summary of Long Articles of Washington Post</center></h2>
+<h2><center>Short Summary of Long News Post Articles </center></h2>
 """
 ,unsafe_allow_html = True)
 
 st.markdown("""
-<h3><center><i>*Note - Enter the article url, <br>ignore the error once url entered the error will dismiss</i></center></h3>
+<h4><center><i>*Note - You can use the below default URL of an article for demo or <br> copy and paste your own post url from the website : <br> &nbsp;&nbsp; </i></center></h4>
 """
 ,unsafe_allow_html = True)
 
+st.sidebar.info("Currently News Websites Supported - NY Times & Washington Post ")
+
 st.sidebar.subheader("Click here to go to Washington Post official website")
-link = '[Washinton Post](https://www.washingtonpost.com/)'
+link = '[Washington Post](https://www.washingtonpost.com/)'
+st.sidebar.markdown(link, unsafe_allow_html=True)
+
+st.sidebar.subheader("Click here to go to New York Times official website")
+link = '[New York Times](https://www.nytimes.com/international/)'
 st.sidebar.markdown(link, unsafe_allow_html=True)
 
 st.sidebar.subheader("About App")
 
 st.sidebar.info("This web app is my hands-on project on NLP (Natural Language Processing) ")
-st.sidebar.info("Enter the URL of the Washinton Post Article ")
-st.sidebar.info("Click on the 'Summarize' button to get the summary of the article ")
+st.sidebar.info("Enter the URL of the News Website Post Article ")
+st.sidebar.info("Click on the 'Summarize' button to get a quick summary of the article ")
 st.sidebar.info('Developed By ~ TechieRushi (Rushikesh Shinde)')
 
 
@@ -69,7 +75,7 @@ def summarize(url,n):
 
 
 #Article URL input from user
-articleURL = st.text_input("Enter the Washington Post Article URL here below (You can use the below default URL of an article or enter your own): ",'https://www.washingtonpost.com/technology/2021/05/14/tesla-apple-tech/')
+articleURL = st.text_input("Enter the Washington Post Article URL here :",'https://www.washingtonpost.com/technology/2021/05/14/tesla-apple-tech/')
 n = st.slider("Enter the no.of.sentences you want",1,5)
 
 page = urllib2.urlopen(articleURL).read().decode('utf-8','ignore')
