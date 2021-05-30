@@ -34,7 +34,7 @@ st.sidebar.markdown(link, unsafe_allow_html=True)
 
 st.sidebar.subheader("About App")
 
-st.sidebar.info("This web app is my hands-on project on NLP (Natural Language Processing) Project ")
+st.sidebar.info("This web app is my hands-on project on NLP (Natural Language Processing) ")
 st.sidebar.info("Enter the URL of the Washinton Post Article ")
 st.sidebar.info("Click on the 'Summarize' button to get the summary of the article ")
 st.sidebar.info('Developed By ~ TechieRushi (Rushikesh Shinde)')
@@ -69,8 +69,8 @@ def summarize(url,n):
 
 
 #Article URL input from user
-articleURL = st.text_input("Enter the Washington Post Article URL here")
-n = st.slider("Enter the no.of.senetences you want",1,5)
+articleURL = st.text_input("Enter the Washington Post Article URL here below (You can use the below default URL of an article or enter your own): ",'https://www.washingtonpost.com/technology/2021/05/14/tesla-apple-tech/')
+n = st.slider("Enter the no.of.sentences you want",1,5)
 
 page = urllib2.urlopen(articleURL).read().decode('utf-8','ignore')
 soup = BeautifulSoup(page,"lxml")
