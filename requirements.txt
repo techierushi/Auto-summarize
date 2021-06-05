@@ -1,8 +1,8 @@
-import urllib.request
+import urllib
 import bs4
 import BeautifulSoup
 import nltk
-import string 
+import string
 import heapq
 import collections
 import streamlit as st
