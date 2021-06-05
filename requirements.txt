@@ -5,3 +5,5 @@ streamlit==0.82.0
 tensorflow==2.5.0
 urllib3==1.25.8
 sortedcollections==1.1.2
+intervaltree==3.0.2
+lxml==4.5.0
