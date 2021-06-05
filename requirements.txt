@@ -1,8 +1,12 @@
-import urllib
-import bs4
-import BeautifulSoup
-import nltk
-import string
-import heapq
-import collections
+import urllib.request as urllib2
+from bs4 import BeautifulSoup
+
+from nltk.tokenize import sent_tokenize,word_tokenize
+from nltk.corpus import stopwords
+from string import punctuation
+
+from nltk.probability import FreqDist
+from heapq import nlargest
+from collections import defaultdict
+
 import streamlit as st
