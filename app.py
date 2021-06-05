@@ -44,6 +44,9 @@ st.sidebar.info("This web app is my hands-on project on NLP (Natural Language Pr
 st.sidebar.info("Enter the URL of the News Website Post Article ")
 st.sidebar.info("Click on the 'Summarize' button to get a quick summary of the article ")
 st.sidebar.info('Developed By ~ TechieRushi (Rushikesh Shinde)')
+st.sidebar.info('All Artcles & Posts Source Credits :')
+st.sidebar.info('© Credits - Washington Post')
+st.sidebar.info('© Credits - New York Times')
 
 
 def summarize(url,n):
